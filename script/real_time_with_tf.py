@@ -5,7 +5,7 @@ import tensorflow as tf #tensorflow==2.17.0
 
 cap = cv2.VideoCapture(0)
 # facetracker = load_model('trained_models/facetracker_40h.h5')
-facetracker = tf.keras.models.load_model('model/facetracker_40h.h5')
+facetracker = tf.keras.models.load_model('trained_model/facetracker_largedata_40h.h5')
 while cap.isOpened():
     _ , frame = cap.read()
     frame = frame[50:500, 50:500,:]
